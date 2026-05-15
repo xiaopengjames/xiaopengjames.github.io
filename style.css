@@ -1,5 +1,5 @@
 /* ========================================
-   style.css — 医疗机构物价管理中心
+   style.css — 物价规则开源
    宣传网站样式表（独立CSS文件）
    配色：深红 (#8b1a1a) + 深蓝 (#1a3c5e)
    ======================================== */
@@ -330,9 +330,12 @@ body {
     transform: translateY(-2px);
 }
 .stat-icon {
+    color: var(--deep-red);
     font-size: 1.8rem;
     margin-bottom: 6px;
-    display: block;
+}
+.stat-card:nth-child(2) .stat-icon {
+    color: var(--deep-blue);
 }
 .stat-value {
     font-size: 1.55rem;
@@ -426,7 +429,10 @@ body {
     color: var(--text-light);
     line-height: 1.7;
 }
-.rules-intro-icon { font-size: 2rem; flex-shrink: 0; }
+.rules-intro-icon {
+    font-size: 2rem;
+    color: var(--deep-blue);
+}
 
 .rules-grid {
     display: grid;
