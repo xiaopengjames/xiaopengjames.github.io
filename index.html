@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医疗机构物价管理中心</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- ==================== 导航栏 ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a class="nav-brand" onclick="switchTab('home')">
+                <span class="nav-brand-icon">价</span>
+                医疗机构物价管理
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="active" onclick="switchTab('home')">首 页</a></li>
+                <li><a onclick="switchTab('policy')">政策文件</a></li>
+                <li><a onclick="switchTab('rules')">规则库共享</a></li>
+                <li><a onclick="switchTab('data')">信息系统与数据</a></li>
+                <li><a onclick="switchTab('about')">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== 主内容区 ==================== -->
+    <div class="main-container">
+
+        <!-- 首页 -->
+        <section id="home" class="content-section active">
+            <span class="section-label">◆ 首页概览</span>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>规范医疗物价<br><span class="highlight">守护医患公平</span></h1>
+                    <p>依据国家及地方物价政策，对医疗机构各项收费实施全流程管理，确保每一笔费用合规、透明、可追溯。</p>
+                    <span class="hero-highlight">最新动态：2026年5月更新</span>
+                    <div class="notice-bar">
+                        <span class="notice-dot"></span>
+                        <strong>通知：</strong>国家医保局发布《关于进一步规范医疗机构价格行为的通知》（2026年4月），请各科室及时查阅并落实。
+                    </div>
+                </div>
+                <div class="hero-cards">
+                    <div class="stat-card">
+                        <span class="stat-icon">📋</span>
+                        <div class="stat-value">187</div>
+                        <div class="stat-label">现行有效物价政策</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">✅</span>
+                        <div class="stat-value red">99.7<span class="stat-unit">%</span></div>
+                        <div class="stat-label">价格合规率</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 政策文件 -->
+        <section id="policy" class="content-section">
+            <span class="section-label">◆ 政策文件</span>
+            <h2 class="section-title">政策法规与文件汇编</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">收录国家及省市各级价格主管部门、卫生健康行政部门发布的相关政策文件，定期更新维护。</p>
+            <div class="policy-list">
+                <div class="policy-item">
+                    <span class="policy-index">01</span>
+                    <div class="policy-info">
+                        <h4>《医疗机构内部价格行为管理规定》<span class="policy-tag">现行有效</span></h4>
+                        <p class="policy-meta">国家卫生健康委 · 2025年修订版 · 文号：国卫财发〔2025〕18号</p>
+                    </div>
+                </div>
+                <div class="policy-item">
+                    <span class="policy-index">02</span>
+                    <div class="policy-info">
+                        <h4>《全国医疗服务项目价格规范（2024版）》<span class="policy-tag">现行有效</span></h4>
+                        <p class="policy-meta">国家医保局 · 2024年发布 · 文号：医保发〔2024〕35号</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 规则库共享 (原物价规则) -->
+        <section id="rules" class="content-section">
+            <span class="section-label">◆ 规则库共享</span>
+            <h2 class="section-title">规则库共享平台</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">汇集各级医疗机构物价管理核心规则，实现标准化经验共享，提升整体管理效能。</p>
+            <div class="rules-intro">
+                <span class="rules-intro-icon">🔗</span>
+                <span>本规则库由多家三甲医院物价管理部门联合共建，涵盖定价、审核、公示、监督等关键环节，支持按科室、项目类型快速检索调用。</span>
+            </div>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-card-header">
+                        <span class="rule-card-num">规则 R-001</span>
+                        <span class="rule-share-badge">共享</span>
+                    </div>
+                    <h4>依法定价通用准则</h4>
+                    <p class="rule-scope">适用科室：全部临床科室 · 贡献单位：辽宁省人民医院</p>
+                    <p>严格执行政府指导价与市场调节价分类管理，公立医疗机构基本医疗服务实行政府指导价，不得超标准收费。</p>
+                    <span class="rule-principle">核心原则：合规性</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-header">
+                        <span class="rule-card-num blue">规则 R-002</span>
+                        <span class="rule-share-badge">共享</span>
+                    </div>
+                    <h4>明码标价与公示制度</h4>
+                    <p class="rule-scope">适用科室：门诊、住院部 · 贡献单位：沈阳盛京医院</p>
+                    <p>所有医疗服务项目及药品、耗材价格须在显著位置公示，通过电子屏幕、自助查询终端等多渠道向患者公开。</p>
+                    <span class="rule-principle blue">核心原则：透明度</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 信息系统与数据 -->
+        <section id="data" class="content-section">
+            <span class="section-label">◆ 信息系统与数据</span>
+            <h2 class="section-title">信息化支撑与数据管理</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">依托院内物价管理系统，实现价格数据的集中维护、实时同步与智能预警。</p>
+            <div class="info-grid">
+                <div class="info-panel">
+                    <h4>▎近期价格调整记录</h4>
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>调整日期</th>
+                                <th>项目名称</th>
+                                <th>调整类型</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2026-05-10</td>
+                                <td>常规心电图检查</td>
+                                <td>价格上调</td>
+                                <td><span class="status-dot green"></span>已生效</td>
+                            </tr>
+                            <tr>
+                                <td>2026-05-08</td>
+                                <td>血液透析（单次）</td>
+                                <td>价格下调</td>
+                                <td><span class="status-dot green"></span>已生效</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-panel">
+                    <h4>▎系统运行概况</h4>
+                    <div class="metric-row">
+                        <span class="metric-chip">在管项目总数：12,460 项</span>
+                        <span class="metric-chip highlight">本月更新：36 批次</span>
+                        <span class="metric-chip">数据准确率：99.8%</span>
+                        <span class="metric-chip">接口状态：正常</span>
+                    </div>
+                    <p class="info-note">系统采用实时同步机制，政策调整后24小时内完成全库更新，保障价格数据准确无误。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们 -->
+        <section id="about" class="content-section">
+            <span class="section-label">◆ 关于我们</span>
+            <h2 class="section-title">关于物价管理办公室</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">致力于构建规范、透明、高效的医疗机构物价管理体系。</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h4>我们的职责</h4>
+                    <p>物价管理办公室是本院价格管理的核心部门，负责全院医疗服务项目及药品耗材的价格制定、审核、公示与监督工作。我们严格遵循国家法律法规，保障患者权益，维护医疗秩序。</p>
+                </div>
+                <div class="about-text">
+                    <h4>联系方式</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            沈阳市和平区南京北街155号 · 行政楼3层
+                        </li>
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            024-1234-5678（工作日 8:00-17:00）
+                        </li>
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            price-office@hospital-example.cn
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ==================== 页脚 ==================== -->
+    <footer class="site-footer">
+        <p>© 2026 <span>医疗机构物价管理中心</span> · 严谨 · 公正 · 透明 · 版权所有</p>
+    </footer>
+
+    <script>
+        // 栏目切换功能
+        function switchTab(tabId) {
+            // 隐藏所有内容区块
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // 显示选中的内容区块
+            const activeSection = document.getElementById(tabId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+            
+            // 更新导航栏激活状态
+            const navAnchors = document.querySelectorAll('.nav-links a');
+            navAnchors.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick') === `switchTab('${tabId}')`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // 移动端关闭菜单
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.getElementById('menuToggle');
+            if (navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 汉堡菜单交互
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // 点击导航链接时关闭菜单
+        const navLinkElements = document.querySelectorAll('.nav-links a');
+        navLinkElements.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
