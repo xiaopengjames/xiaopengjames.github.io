@@ -725,3 +725,61 @@ body {
     .nav-brand { font-size: 1rem; }
     .nav-brand-icon { width: 30px; height: 30px; font-size: 1rem; border-radius: 6px; }
 }
+
+/* 贡献者区域 */
+.contributors-section {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.contributors-section h4 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--deep-blue);
+    margin-bottom: 4px;
+}
+
+.contributors-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contributor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 16px;
+}
+
+.contributor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--deep-blue-bg);
+    color: var(--deep-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+/* 交替颜色，增加视觉变化 */
+.contributor-item:nth-child(odd) .avatar {
+    background: var(--deep-red-bg);
+    color: var(--deep-red);
+}
+
+.contributor-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text);
+}
